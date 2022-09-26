@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_26_155144) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_26_155411) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_26_155144) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["profesor_id"], name: "index_clases_on_profesor_id"
+  end
+
+  create_table "pagos", force: :cascade do |t|
+    t.date "fecha_de_pago"
+    t.string "medio_de_pago"
+    t.boolean "pagado"
+    t.string "comprobante"
+    t.string "detalle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "profesors", force: :cascade do |t|
