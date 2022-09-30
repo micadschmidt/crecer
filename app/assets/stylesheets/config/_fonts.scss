@@ -7,9 +7,10 @@ $headers-font: 'Playball', cursive;
 
 /*Tipografia */
 h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 700;
   font-family: 'Playball', cursive;
+  color: #AA1229;
 }
 h2 {
   font-size: 2.8rem;
@@ -23,6 +24,9 @@ h1,h2,h3 {
 }
 p {
   font-size: 1.3rem;
+}
+a {
+  text-decoration: none;
 }
 // To use a font file (.woff) uncomment following lines
 // @font-face {

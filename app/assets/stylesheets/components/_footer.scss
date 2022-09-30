@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: #AA1229;
+}
+a:hover {
+  color: white;
+}
+.footer {
+  justify-content: space-between;
+  background: $secondary;
+  flex-grow: 0;
+  text-align: center;
+  position: fixed;
+  height: 2.1rem;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  padding: .5rem;
+  margin-top: 2rem;
+}
+
+.footer-items {
+  display: inline;
+  justify-content: space-between;
+  padding: 1rem;
+}
