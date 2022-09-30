@@ -21,8 +21,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
-
-a {
+.card-info {
+  margin: 2rem;
+}
+a:hover {
 	text-decoration: none;
 	font-weight: bolder;
 }
