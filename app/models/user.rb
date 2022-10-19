@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :apellido, presence: true
   validates :alumnonombrecompleto, presence: true
   validates :email, uniqueness: { scope: :email, message: "email already has an account" }
-  has_many :pagos
+  #has_many :pagos
   #validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  #validates :foto, presence: true
+  #has_one_attached :foto
 end
