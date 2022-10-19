@@ -37,10 +37,12 @@ clase3 = Clase.new(categoria: 'Gimnasia artística', profesor_id: profesor3.id, 
 clase3.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1655842556432-ece48a4f2c1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), filename: "clase3.png", content_type: "image/jpeg")
 clase3.save!
 
-puts 'creando alumnos'
-alumno1 = Alumno.new(edad: 5, clase: clase1.id)
-alumno1.save!
-alumno2 = Alumno.new(edad: 4, clase: clase2.id)
-alumno2.save!
-alumno3 = Alumno.new(edad: 10, clase: clase3.id)
-alumno3.save!
+# puts 'creando alumnos'
+# alumno1 = Alumno.new(edad: 5, clase: clase1.id)
+# alumno1.save!
+# alumno2 = Alumno.new(edad: 4, clase: clase2.id)
+# alumno2.save!
+# alumno3 = Alumno.new(edad: 10, clase: clase3.id)
+# alumno3.save!
+# hacer migracion arreglando alumnos:agregar nombre, apellido, asociacion con clase id
+
