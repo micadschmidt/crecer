@@ -18,6 +18,14 @@ user1.save!
 user2 = User.create(nombre: 'Abi', apellido: 'Flores', email: 'abi@gmail.com', alumnonombrecompleto: 'Joaquin Canteros', password: '123456')
 user2.save!
 
+puts 'creando profesores'
+profesor1 = Profesor.new(nombre: 'Dimmas', apellido: 'Kirolinko', descripcion_profesor: 'Hola soy Dimmas y soy Profe de Educacion Fisica')
+profesor1.save!
+profesor2 = Profesor.new(nombre: 'Abi', apellido: 'Flores', descripcion_profesor: 'Hola soy Abi y soy Profe de Educacion Fisica')
+profesor2.save!
+profesor3 = Profesor.new(nombre: 'Cami', apellido: 'Flores', descripcion_profesor: 'Hola soy Abi y soy Profe de Educacion Fisica')
+profesor3.save!
+
 puts 'creando clases'
 clase1 = Clase.new(categoria: 'Estimulación temprana', profesor_id: profesor1.id, descripcion: 'La Educación o Estimulación Temprana es un conjunto de técnicas de intervención educativas que pretende impulsar el desarrollo cognitivo, social y emocional del niño durante la etapa infantil')
 clase1.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1600821986515-3ef5b0f29f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80"), filename: "clase1.png", content_type: "image/jpeg")
