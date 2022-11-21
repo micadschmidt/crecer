@@ -23,7 +23,7 @@ profesor1 = Profesor.new(nombre: 'Dimmas', apellido: 'Kirolinko', descripcion_pr
 profesor1.save!
 profesor2 = Profesor.new(nombre: 'Abi', apellido: 'Flores', descripcion_profesor: 'Hola soy Abi y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica')
 profesor2.save!
-profesor3 = Profesor.new(nombre: 'Cami', apellido: 'Flores', descripcion_profesor: 'Hola soy Abi y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica')
+profesor3 = Profesor.new(nombre: 'Cami', apellido: 'Flores', descripcion_profesor: 'Hola soy Cami y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica-Hola soy Abi y soy Profe de Educacion Fisica')
 profesor3.save!
 
 puts 'creando clases'
