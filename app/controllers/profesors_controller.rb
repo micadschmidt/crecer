@@ -1,5 +1,5 @@
 class ProfesorsController < ApplicationController
-  before_action :set_assistant, only: [:show, :edit, :update]
+  before_action :set_profesor, only: [:show, :edit, :update]
   before_action :set_user
 
   def index
