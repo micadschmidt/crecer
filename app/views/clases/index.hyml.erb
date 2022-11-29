@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class="container">
+    <h1>Crecer</h1>
+    <h2>Clases</h2>
+  </div>
+</div>
+<div class="container mb-5">
+  <% @clases.each do |clase| %>
+    <div class="card-product mb-2">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= clase.categoria %></h2>
+        <p><%= clase.descripcion %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
