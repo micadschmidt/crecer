@@ -1,6 +1,6 @@
 class ClasesController < ApplicationController
   # before_action :set_clases, only: [:show, :edit, :update]
-  # before_action :set_user
+  before_action :set_user
 
   def index
     @clases = Clase.all
@@ -44,14 +44,14 @@ class ClasesController < ApplicationController
   #   redirect_to profesors_path, status: :see_other
   # end
 
-
+  private
   # def set_clases
   #   @clase = Clase.find(params[:id])
   # end
 
-  # def set_user
-  #   @user = current_user
-  # end
+  def set_user
+    @user = current_user
+  end
 
   # def clase_params
   #   params.require(:profesor).permit(:nombre, :apellido, :descripcion_profesor, :foto_profesor)
