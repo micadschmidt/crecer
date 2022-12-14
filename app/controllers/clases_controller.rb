@@ -1,6 +1,6 @@
 class ClasesController < ApplicationController
-  # before_action :set_clases, only: [:show, :edit, :update]
-  before_action :set_user
+  before_action :set_clases, only: [:show, :edit, :update]
+  # before_action :set_user
 
   def index
     @clases = Clase.all
@@ -10,9 +10,9 @@ class ClasesController < ApplicationController
     @clase = Clase.find
   end
 
-  # def new
-  #   @clase = Clase.new
-  # end
+  def new
+    @clase = Clase.new
+  end
 
   # def create
   #   @profesor = Profesor.new(profesor_params)
@@ -45,15 +45,15 @@ class ClasesController < ApplicationController
   # end
 
   private
-  # def set_clases
-  #   @clase = Clase.find(params[:id])
-  # end
+  def set_clases
+    @clase = Clase.find(params[:id])
+  end
 
   def set_user
     @user = current_user
   end
 
-  # def clase_params
-  #   params.require(:profesor).permit(:nombre, :apellido, :descripcion_profesor, :foto_profesor)
-  # end
+  def clase_params
+    params.require(:profesor).permit(:nombre, :apellido, :descripcion_profesor, :foto_profesor)
+  end
 end
