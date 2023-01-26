@@ -6,8 +6,8 @@ class Clase < ApplicationRecord
   validates :descripcion, length: { minimum: 10, maximum: 400 }
   validates :categoria, presence: true
 
-  #has_one_attached :fotos
+  has_one_attached :fotos
 
 
-  
+
 end

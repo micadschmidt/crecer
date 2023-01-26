@@ -28,13 +28,13 @@ profesor3.save!
 
 puts 'creando clases'
 clase1 = Clase.new(categoria: 'Estimulación temprana', profesor_id: profesor1.id, descripcion: 'La Educación o Estimulación Temprana es un conjunto de técnicas de intervención educativas que pretende impulsar el desarrollo cognitivo, social y emocional del niño durante la etapa infantil')
-clase1.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1600821986515-3ef5b0f29f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80"), filename: "clase1.png", content_type: "image/jpeg")
+clase1.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1600821986515-3ef5b0f29f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80"), filename: "clase1.jpg", content_type: "image/jpg")
 clase1.save!
 clase2 = Clase.new(categoria: 'Telas', profesor_id: profesor2.id, descripcion: 'Es un ejercicio ideal para fortalecer los huesos. Se gana equilibrio y flexibilidad. La capacidad de adquirir habilidades gimnásticas mejora la confianza y la autoestima.')
-clase2.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1605524240886-403a29dc49ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"), filename: "clase2.png", content_type: "image/jpeg")
+clase2.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1605524240886-403a29dc49ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"), filename: "clase2.jpg", content_type: "image/jpg")
 clase2.save!
 clase3 = Clase.new(categoria: 'Gimnasia artística', profesor_id: profesor3.id, descripcion: 'La gimnasia artística es una modalidad de gimnasia que consiste en la realización de una composición coreográfica, combinando de forma simultánea y a una alta velocidad, movimientos corporales.')
-clase3.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1655842556432-ece48a4f2c1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), filename: "clase3.png", content_type: "image/jpeg")
+clase3.fotos.attach(io: URI.open("https://images.unsplash.com/photo-1655842556432-ece48a4f2c1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), filename: "clase3.jpg", content_type: "image/jpg")
 clase3.save!
 
 # puts 'creando alumnos'
