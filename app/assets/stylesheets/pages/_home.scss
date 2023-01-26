@@ -2,6 +2,8 @@
 @import "components/wpbutton";
 @import "components/navbar";
 
+$breakpoint-tablet: 768px;
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -33,7 +35,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.261);
-  &:hover + .card-image {
+
+  &:hover+.card-image {
     width: 500px;
   }
 }
@@ -68,9 +71,18 @@ a:hover {
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(189, 188, 188, 0.532);
   display: flex;
   align-items: center;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 991px) {
+  .profesor-container {
+    width: 100%;
+    padding: 0 7rem;
+  }
 }
 
 .card-product img {

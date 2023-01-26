@@ -3,5 +3,5 @@ class Profesor < ApplicationRecord
   validates :nombre, presence: true
   validates :apellido, presence: true
   #validates :foto_profesor, presence: true
-  #has_one_attached :foto_profesor
+  has_one_attached :foto_profesor
 end

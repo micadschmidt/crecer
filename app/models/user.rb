@@ -11,5 +11,5 @@ class User < ApplicationRecord
   #has_many :pagos
   #validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   #validates :foto, presence: true
-  #has_one_attached :foto
+  has_one_attached :foto
 end
