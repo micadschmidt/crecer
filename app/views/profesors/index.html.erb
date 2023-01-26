@@ -8,7 +8,7 @@
   <div class="container mb-5 profesor-container">
     <% @profesors.each do |profesor| %>
       <div class="card-product">
-        <%= cl_image_tag current_user.foto.key  %>
+        <%= cl_image_tag profesor.foto_profesor.key %>
         <div class="card-product-infos">
           <h2><%= profesor.nombre %> <%= profesor.apellido %></h2>
           <p><%= profesor.descripcion_profesor %></p>
