@@ -4,15 +4,16 @@
     <h2>Profesores</h2>
   </div>
 </div>
-<div class="container mb-5">
-  <% @profesors.each do |profesor| %>
-    <div class="card-product mb-2">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= profesor.nombre %> <%= profesor.apellido %></h2>
-        <p><%= profesor.descripcion_profesor %></p>
+<div class="main-wrapper" >
+  <div class="container mb-5 profesor-container">
+    <% @profesors.each do |profesor| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= profesor.nombre %> <%= profesor.apellido %></h2>
+          <p><%= profesor.descripcion_profesor %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
