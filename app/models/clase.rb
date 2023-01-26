@@ -7,7 +7,4 @@ class Clase < ApplicationRecord
   validates :categoria, presence: true
 
   has_one_attached :fotos
-
-
-  
 end
