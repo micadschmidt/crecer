@@ -8,3 +8,6 @@ Rails.application.routes.draw do
   resources :clases
   resources :profesors, only: [:index, :update, :new]
 end
+
+
+# Crear rutas para usuario, editar perfil
