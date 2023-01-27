@@ -7,7 +7,7 @@
 <div class="container mb-5">
   <% @clases.each do |clase| %>
     <div class="card-product mb-2">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= cl_image_tag clase.fotos.key  %>
       <div class="card-product-infos">
         <h2><%= clase.categoria %></h2>
         <p><%= clase.descripcion %></p>
