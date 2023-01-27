@@ -97,19 +97,6 @@
           </div>
         </div>
       </div>
-      <div class="card mb-4 mb-lg-0">
-        <div class="card-body p-2">
-          <h5 class="mb-4 mt-4">Reviews about <%= @assistant.firstname %></h5>
-          <ul class="list-group list-group-flush rounded-3">
-            <% @assistant.reviews.each do |review| %>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-              "<%= review.content %>"<div class="w-25"><% review.rating.times do %><i class="fas fa-star pe-2 icon-text"></i>
-              <% end %></div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </div>
