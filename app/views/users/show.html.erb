@@ -1,0 +1,147 @@
+<div class="container main py-4">
+  <div class="pt-5"><h1 class="py-4 text-center"><%= @assistant.firstname %> <%= @assistant.lastname %></h1></div>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body border-0 rounded bg-light shadow-lg text-center">
+          <%= cl_image_tag @assistant.photo.key, class:"avatar-square-shadow-xlg", crop: :thumb %>
+          <h5 class="my-3"><%= @assistant.firstname %></h5>
+          <p class="text-muted mb-1">Assistant</p>
+          <p class="text-muted mb-4">Available: <%= @assistant.availability %></p>
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <% if policy(@assistant).edit? %>
+              <%= link_to "My Applications", applications_path, type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+              <%= link_to "Edit Profile", edit_assistant_path, type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+              <%#= link_to "Cancel", assitant_path(@assistant), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+              <%= link_to "Leave us your review", new_comment_path, "data-bs-toggle" => "modal", "data-bs-target" => "#staticBackdrop",type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;" %>
+            <% else %>
+            <%= link_to "Chat", new_assistant_chatroom_path(@assistant), type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+            <%= link_to "Add a review for this assistant", new_assistant_review_path(@assistant.id), type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body border-0 rounded bg-light shadow-lg p-0">
+          <ul class="list-group list-group-flush rounded-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              <p class="text-muted mb-1">Curriculum Vitae</p>
+              <a href="#"><i class="fas fa-globe fa-lg text-warning fa-lg"></i></a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              <p class="text-muted mb-1">Github/<%= @assistant.firstname %>_<%= @assistant.lastname %></p>
+              <a href="#"><i class="fab fa-github fa-lg" style="color: #333333;"></i></a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              <p class="text-muted mb-1">Twitter/<%= @assistant.firstname %>_<%= @assistant.lastname %></p>
+              <a href="#"><i class="fab fa-twitter fa-lg" style="color: #55acee;"></i></a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              <p class="text-muted mb-1">Instagram/<%= @assistant.firstname %>_<%= @assistant.lastname %></p>
+              <a href="#"><i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              <p class="text-muted mb-1">Facebook/<%= @assistant.firstname %>_<%= @assistant.lastname %></p>
+              <a href="#"><i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-8">
+      <div class="card">
+        <div class="card-body border-0 rounded bg-light shadow-lg">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Full name</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @assistant.firstname %> <%= @assistant.lastname %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Email</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @assistant.user.email %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Phone</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @assistant.user.phone %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Skills</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @assistant.skills.gsub(/\"/, '').split(",").join(",").gsub('[,','').gsub(']','') %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Address</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @assistant.user.address %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-4 mb-lg-0">
+        <div class="card-body p-2">
+          <h5 class="mb-4 mt-4">Reviews about <%= @assistant.firstname %></h5>
+          <ul class="list-group list-group-flush rounded-3">
+            <% @assistant.reviews.each do |review| %>
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+              "<%= review.content %>"<div class="w-25"><% review.rating.times do %><i class="fas fa-star pe-2 icon-text"></i>
+              <% end %></div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content align-items-center justify-content-around">
+      <div class="modal-header">
+        <div class="py-2"><h2 class="p-2 text-center">Leave us your review</h2></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="py-2">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-4">
+                  <%= simple_form_for [@comment] do |f| %>
+                    <%= f.input :title, placeholder: "Describe your experience", id:"password", class:"password" %>
+                    <%= f.input :content, placeholder: "What do you like about our service?", id:"password", class:"password" %>
+                    <%= f.input :rating, collection: (1..5).to_a, label: " Rate your experience", input_html: {data: {controller: "star-rating"}}, id:"password", class:"password" %>
+                    <%= f.input :name, placeholder: "Leave us your name", id:"password", class:"password" %>
+                    <%= f.submit "Send your comment", id:"login-btn", class:"btn text-center w-100" %>
+                    <h6 class="text-center text-muted py-2">Thank your for trusting in us!</h6>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
