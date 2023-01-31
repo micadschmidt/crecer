@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :clases
   resources :profesors, only: [:index, :update, :new]
+  get "user/show", to: 'user#show'
 end
 
 
