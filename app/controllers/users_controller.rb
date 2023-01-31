@@ -14,6 +14,25 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+    @user = User.find
+  end
+
+  def update
+    @user = User.find
+    if @user.update(user_params)
+      redirect_to user_path(@user)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path, status: :see_other
+  end
+
   private
   def set_users
     @user = User.find(params[:id])

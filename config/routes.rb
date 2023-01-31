@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :clases
   resources :profesors, only: [:index, :update, :new]
-  get "user/show", to: 'user#show'
+  # get "user/show", to: 'user#show'
+  resources :users
 end
-
-
-# Crear rutas para usuario, editar perfil
-# Crear controllador para Users
