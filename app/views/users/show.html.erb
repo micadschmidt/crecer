@@ -1,74 +1,72 @@
-<%# # Vista para editar perfil del usuario %>
 <div class="banner">
   <div class="container">
     <h1>Crecer</h1>
     <h2>Mi Perfil</h2>
     <div class="container main py-4">
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="card-body border-0 rounded bg-light shadow-lg text-center">
-            <%= cl_image_tag @user.foto.key, class:"avatar-square-shadow-xlg", crop: :thumb %>
-            <h5 class="my-3"><%= @user.nombre %></h5>
-            <div class="d-flex flex-column align-items-center justify-content-center">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body border-0 rounded bg-light shadow-lg text-center">
+              <%= cl_image_tag @user.foto.key, class:"avatar-square-shadow-xlg", crop: :thumb %>
+              <h5 class="my-3"><%= @user.nombre %></h5>
+              <div class="d-flex flex-column align-items-center justify-content-center">
               <%= link_to "Editar perfil", edit_user_path, type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
               <%#= link_to "Cancel", assitant_path(@assistant), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-            <%# <%= link_to "Add a review for this assistant", new_assistant_review_path(@assistant.id), type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+              <%# <%= link_to "Add a review for this assistant", new_assistant_review_path(@assistant.id), type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
             </div>
           </div>
         </div>
       </div>
-    <div class="col-12 col-md-6 col-lg-8">
-      <div class="card">
-        <div class="card-body border-0 rounded bg-light shadow-lg">
-          <div class="row">
-            <div class="col-sm-3">
-              <p class="mb-0">Nombre Completo</p>
+      <div class="col-12 col-md-6 col-lg-8">
+        <div class="card">
+          <div class="card-body border-0 rounded bg-light shadow-lg">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Nombre Completo</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%= @user.nombre %> <%= @user.apellido %></p>
+              </div>
             </div>
-            <div class="col-sm-9">
-              <p class="text-muted mb-0"><%= @user.nombre %> <%= @user.apellido %></p>
-            </div>
-          </div>
           <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <p class="mb-0">Email</p>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%= @user.email %></p>
+              </div>
             </div>
-            <div class="col-sm-9">
-              <p class="text-muted mb-0"><%= @user.email %></p>
-            </div>
-          </div>
           <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <p class="mb-0">Teléfono</p>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Teléfono</p>
+              </div>
+              <div class="col-sm-9">
+                <%# # aca va el telefono %>
+              </div>
             </div>
-            <div class="col-sm-9">
-              <%# # aca va el telefono %>
-            </div>
-          </div>
           <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <p class="mb-0">Nombre del alumno/a</p>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Nombre del alumno/a</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><%= @user.alumnonombrecompleto %></p>
+              </div>
             </div>
-            <div class="col-sm-9">
-              <p class="text-muted mb-0"><%= @user.alumnonombrecompleto %></p>
-            </div>
-          </div>
           <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <p class="mb-0">Dirección</p>
-            </div>
-            <div class="col-sm-9 mb-3">
-              <%# # aca va la direccion %>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Dirección</p>
+              </div>
+              <div class="col-sm-9 mb-3">
+                <%# # aca va la direccion %>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 </div>
