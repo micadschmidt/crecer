@@ -13,10 +13,10 @@ User.destroy_all
 
 puts 'creando usuarios'
 
-user1 = User.new(nombre: 'Dimmas', apellido: 'Kirolinko', email: 'dimmas@gmail.com', alumnonombrecompleto: 'Brianna Kirolinko', password: '123456')
+user1 = User.new(nombre: 'Dimmas', apellido: 'Kirolinko', email: 'dimmas@gmail.com', alumnonombrecompleto: 'Brianna Kirolinko', telefono: '3434552605', password: '123456')
 user1.foto.attach(io: URI.open("https://res.cloudinary.com/watchlistcreator/image/upload/v1674766308/development/download_zm6zgt.png"), filename: "user1.jpg", content_type: "image/jpg")
 user1.save!
-user2 = User.new(nombre: 'Abi', apellido: 'Flores', email: 'abi@gmail.com', alumnonombrecompleto: 'Joaquin Canteros', password: '123456')
+user2 = User.new(nombre: 'Abi', apellido: 'Flores', email: 'abi@gmail.com', alumnonombrecompleto: 'Joaquin Canteros', alumnonombrecompleto1: 'Rafael Canteros', telefono: '3435062879', password: '123456')
 user2.foto.attach(io: URI.open("https://res.cloudinary.com/watchlistcreator/image/upload/v1674766396/development/download_1_aw2hei.png"), filename: "user2.jpg", content_type: "image/jpg")
 user2.save!
 
