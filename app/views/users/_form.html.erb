@@ -1,0 +1,24 @@
+<div class="card p-4 rounded shadow-lg" style="margin:1rem 0 0 0;">
+  <%= simple_form_for(@user) do |f| %>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-6 col-lg-6">
+        <%= f.input :nombre, placeholder: "Write your given name", label: false %>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <%= f.input :apellido, placeholder: "Write your last name", label: false  %>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-12 col-lg-12">
+        <%= f.input :foto, as: :file %>
+      </div>
+      <%= f.submit "Save changes", id:"Sign-up-btn", class: "profile-btn w-75 btn-sm" %>
+    <div class="register">
+      <% if !current_user.nil? %>
+        <%= link_to "Back", user_path, class:"register-btn" %>
+      <% else %>
+        <%= link_to "Back", user_path, class:"register-btn" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
