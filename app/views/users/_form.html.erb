@@ -2,22 +2,30 @@
   <%= simple_form_for(@user) do |f| %>
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6 col-lg-6">
-        <%= f.input :nombre, placeholder: "Write your given name", label: false %>
+        <%= f.input :nombre, placeholder: "Nombre", label: false %>
       </div>
       <div class="col-12 col-md-6 col-lg-6">
-        <%= f.input :apellido, placeholder: "Write your last name", label: false  %>
+        <%= f.input :apellido, placeholder: "Apellido", label: false  %>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-6 col-lg-6">
+        <%= f.input :alumnonombrecompleto, placeholder: "Nombre del 1er alumno", label: false %>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <%= f.input :alumnonombrecompleto1, placeholder: "Nombre del 2do alumno", label: false  %>
       </div>
     </div>
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-12 col-lg-12">
         <%= f.input :foto, as: :file %>
       </div>
-      <%= f.submit "Save changes", id:"Sign-up-btn", class: "profile-btn w-75 btn-sm" %>
+      <%= f.submit "Guardar cambios", id:"Sign-up-btn", class: "profile-btn w-75 btn-sm" %>
     <div class="register">
       <% if !current_user.nil? %>
-        <%= link_to "Back", user_path, class:"register-btn" %>
+        <%= link_to "Atrás", user_path, class:"register-btn" %>
       <% else %>
-        <%= link_to "Back", user_path, class:"register-btn" %>
+        <%= link_to "Atrás", user_path, class:"register-btn" %>
       <% end %>
     </div>
   <% end %>
