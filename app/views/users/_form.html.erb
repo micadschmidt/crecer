@@ -29,7 +29,7 @@
       <div class="col-12 col-md-12 col-lg-12">
         <%= f.input :foto, as: :file %>
       </div>
-      <%= f.submit "Guardar cambios", id:"Sign-up-btn", class: "btn btn-outline-dark btn-soft profile-btn w-75 btn-sm" %> 
+      <%= f.submit "Guardar cambios", id:"Sign-up-btn", class: "btn btn-outline-dark btn-soft profile-btn w-75 btn-sm" %>
     <div class="register mb-3">
       <% if !current_user.nil? %>
         <%= link_to "Atrás", user_path, class:"register-btn" %>
@@ -40,3 +40,4 @@
   <% end %>
 </div>
 </div>
+...
