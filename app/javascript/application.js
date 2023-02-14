@@ -3,4 +3,4 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 //= jquery
-//= jquery-ui
+//= jquery-ui  
