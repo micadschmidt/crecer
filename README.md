@@ -8,9 +8,9 @@ Key Features:
 
 2. User Authentication and Authorization: Robust authentication and authorization mechanisms ensure secure access to the system, allowing administrators and parents to perform their respective tasks.
 
-Calendar Integration: The system incorporates a calendar module, enabling administrators to schedule and manage gymnastics classes, events, competitions, and other important dates. Parents can view their child's class schedule and receive timely updates.
+3. Calendar Integration: The system incorporates a calendar module, enabling administrators to schedule and manage gymnastics classes, events, competitions, and other important dates. Parents can view their child's class schedule and receive timely updates.
 
-Notifications and Announcements: The application employs a notification system to send important announcements, reminders, and updates to both administrators and parents. This helps ensure effective communication between the academy and its members.
+4. Notifications and Announcements: The application employs a notification system to send important announcements, reminders, and updates to both administrators and parents. This helps ensure effective communication between the academy and its members.
 
 Class Management: Administrators can create, modify, and delete classes, assign coaches, and manage class rosters. Parents can view their child's enrolled classes, track progress, and request changes when necessary.
 
