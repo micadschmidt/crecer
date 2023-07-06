@@ -12,11 +12,11 @@ Key Features:
 
 4. Notifications and Announcements: The application employs a notification system to send important announcements, reminders, and updates to both administrators and parents. This helps ensure effective communication between the academy and its members.
 
-Class Management: Administrators can create, modify, and delete classes, assign coaches, and manage class rosters. Parents can view their child's enrolled classes, track progress, and request changes when necessary.
+5. Class Management: Administrators can create, modify, and delete classes, assign coaches, and manage class rosters. Parents can view their child's enrolled classes, track progress, and request changes when necessary.
 
-Attendance Tracking: The system includes a feature to record and track attendance for gymnastics classes. This allows administrators to monitor attendance patterns and identify any issues that may arise.
+6. Attendance Tracking: The system includes a feature to record and track attendance for gymnastics classes. This allows administrators to monitor attendance patterns and identify any issues that may arise.
 
-Performance Tracking: Administrators and parents can monitor and track the performance of gymnasts through the system. This feature provides insights into progress, achievements, and areas for improvement.
+7. Performance Tracking: Administrators and parents can monitor and track the performance of gymnasts through the system. This feature provides insights into progress, achievements, and areas for improvement.
 
 Payment Management: The application facilitates online payment processing, allowing parents to conveniently pay for classes, events, and other services. Administrators can manage payment records and generate financial reports.
 
