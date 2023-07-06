@@ -4,9 +4,9 @@ The Gymnastics Academy CRECER 🤸‍♀️ is a comprehensive web application b
 
 Key Features:
 
-User Roles: The system supports multiple user roles, including administrators and parents. Administrators have access to advanced management features, while parents can view and interact with their child's information.
+1. User Roles: The system supports multiple user roles, including administrators and parents. Administrators have access to advanced management features, while parents can view and interact with their child's information.
 
-User Authentication and Authorization: Robust authentication and authorization mechanisms ensure secure access to the system, allowing administrators and parents to perform their respective tasks.
+2. User Authentication and Authorization: Robust authentication and authorization mechanisms ensure secure access to the system, allowing administrators and parents to perform their respective tasks.
 
 Calendar Integration: The system incorporates a calendar module, enabling administrators to schedule and manage gymnastics classes, events, competitions, and other important dates. Parents can view their child's class schedule and receive timely updates.
 
