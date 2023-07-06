@@ -1,6 +1,6 @@
 Description:
 
-The Gymnastics Academy CRECER is a comprehensive web application built on Ruby on Rails (RoR), JavaScript, and SQL, designed to streamline the operations and enhance the communication for a gymnastics academy. This repository serves as the central hub for the development and maintenance of the system.
+The Gymnastics Academy CRECER 🤸‍♀️ is a comprehensive web application built on Ruby on Rails (RoR), JavaScript, and SQL, designed to streamline the operations and enhance the communication for a gymnastics academy. This repository serves as the central hub for the development and maintenance of the system.
 
 Key Features:
 
