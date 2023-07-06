@@ -18,10 +18,10 @@ Key Features:
 
 7. Performance Tracking: Administrators and parents can monitor and track the performance of gymnasts through the system. This feature provides insights into progress, achievements, and areas for improvement.
 
-Payment Management: The application facilitates online payment processing, allowing parents to conveniently pay for classes, events, and other services. Administrators can manage payment records and generate financial reports.
+8. Payment Management: The application facilitates online payment processing, allowing parents to conveniently pay for classes, events, and other services. Administrators can manage payment records and generate financial reports.
 
-Reporting and Analytics: The system generates comprehensive reports and analytics on various aspects, such as attendance, performance, revenue, and more. This helps administrators make data-driven decisions and improve overall operations.
+9. Reporting and Analytics: The system generates comprehensive reports and analytics on various aspects, such as attendance, performance, revenue, and more. This helps administrators make data-driven decisions and improve overall operations.
 
-Responsive Design: The website is designed with responsiveness in mind, ensuring optimal user experience across different devices, including desktops, tablets, and mobile phones.
+10. Responsive Design: The website is designed with responsiveness in mind, ensuring optimal user experience across different devices, including desktops, tablets, and mobile phones.
 
-This repository serves as a collaborative space for developers, where they can contribute to the ongoing development, bug fixes, and feature enhancements of the Gymnastics Academy Management System. By leveraging the power of RoR, JavaScript, and SQL, the repository aims to provide a robust and user-friendly solution to streamline and improve the management of a gymnastics academy.
+11. This repository serves as a collaborative space for developers, where they can contribute to the ongoing development, bug fixes, and feature enhancements of the Gymnastics Academy Management System. By leveraging the power of RoR, JavaScript, and SQL, the repository aims to provide a robust and user-friendly solution to streamline and improve the management of a gymnastics academy.
