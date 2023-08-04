@@ -1,0 +1,20 @@
+development:
+  cloud_name: 'watchlistcreator'
+  api_key: '975445534435654'
+  api_secret: 'cic3nnb_DhPGdsCR8PhC2vrEIls'
+  secure: true
+  cdn_subdomain: true
+
+test:
+  cloud_name: 'watchlistcreator'
+  api_key: '975445534435654'
+  api_secret: 'cic3nnb_DhPGdsCR8PhC2vrEIls'
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: 'watchlistcreator'
+  api_key: '975445534435654'
+  api_secret: 'cic3nnb_DhPGdsCR8PhC2vrEIls'
+  secure: true
+  cdn_subdomain: true
