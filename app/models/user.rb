@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :nombre, presence: true
   validates :apellido, presence: true
   validates :alumnonombrecompleto, presence: true
-  validates :email, uniqueness: { scope: :email, message: "email already has an account" }
+  validates :email, uniqueness: { scope: :email, message: "Este email ya tiene una cuenta." }
   #has_many :pagos
   #validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   #validates :foto, presence: true
