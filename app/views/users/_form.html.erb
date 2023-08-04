@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
 <div class="card p-4 rounded shadow-lg mb-4">
   <%= simple_form_for(@user) do |f| %>
     <div class="row justify-content-center align-items-center">
@@ -26,11 +26,18 @@
       </div>
     </div>
     <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-md-12 col-lg-12">
-        <%= f.input :foto, as: :file %>
+      
+      <div class="circular-img-uploader d-flex flex-column align-items-center">
+        <%= render PictureUploaderComponent.new(form: f, image: user&.foto, fallback: "avatar-empty.png") %>
+        <% if @user.persisted? %>
+          <p class="m-2 text-gray-500">Cambiar foto</p>
+        <% else %>
+          <p class="m-2 text-gray-500">Subir foto</p>
+        <% end %>
       </div>
       <%= f.submit "Guardar cambios", id:"Sign-up-btn", class: "btn btn-outline-dark btn-soft profile-btn w-75 btn-sm" %>
-    <div class="register mb-3">
+    </div>
+    <div class="register d-flex justify-content-center mt-3">
       <% if !current_user.nil? %>
         <%= link_to "Atrás", user_path, class:"register-btn" %>
       <% else %>

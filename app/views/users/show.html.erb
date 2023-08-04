@@ -6,16 +6,21 @@
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card mb-5">
-            <div class="card-body border-0 rounded bg-light shadow-lg text-center">
-              <%= cl_image_tag @user.foto.key, class:"avatar-square-shadow-xlg", crop: :thumb %>
+            <div class="d-flex flex-column align-items-center card-body border-0 rounded bg-light shadow-lg text-center">
+              <%= cl_image_tag(@user.foto.key,
+                fallback: "avatar-empty.png",
+                style: "object-fit: cover; max-width: 150px;",
+                class: "border border-4 border-white rounded-50 !important",
+                data: { file_preview_target: "output" }) %>
+
               <h5 class="my-3"><%= @user.nombre %></h5>
               <div class="d-flex flex-column align-items-center justify-content-center">
-              <%= link_to "Editar perfil", edit_user_path, type: "button", class:" btn btn-outline-dark btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
+              <%= link_to "Editar perfil", edit_user_path, type: "button", class:" btn btn-outline-dark btn-soft profile-btn btn-sm mx-0 mt-2 w-100"%>
               <%#= link_to "Cancel", assitant_path(@assistant), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
               <%# <%= link_to "Add a review for this assistant", new_assistant_review_path(@assistant.id), type: "button", class:"btn btn-soft profile-btn btn-sm mx-0 mt-2", style:"width: 70%;"%>
             </div>
           </div>
-        </div>      
+        </div>
       </div>
       <div class="col-12 col-md-6 col-lg-8">
         <div class="card mb-5">

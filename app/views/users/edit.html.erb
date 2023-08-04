@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="pt-5" style="margin:3rem 0 0 0;"><h1 class="pt-4 text-center">Editar perfil</h1></div>
+<%= button_tag class: "btn btn-square position-absolute p-2", onClick:"history.back()" do %>
+          <%= feather_icon "arrow-left", classes: "" %>
+        <% end %>
+  <div class="" style="margin:3rem 0 0 0;"><h2 class="text-center">Editar perfil</h2></div>
         <%= render "form", user: @user %>
   </div>
 </div>
