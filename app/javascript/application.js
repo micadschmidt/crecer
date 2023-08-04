@@ -1,6 +1,9 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
-import "./controllers"
+import "controllers"
+import "popper"
 import "bootstrap"
-//= jquery
-//= jquery-ui  
+import "chartkick"
+import "Chart.bundle"
+import Rails from '@rails/ujs';
+Rails.start();
