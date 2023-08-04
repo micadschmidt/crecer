@@ -2,6 +2,16 @@
 <div class="card p-4 rounded shadow-lg mb-4">
   <%= simple_form_for(@user) do |f| %>
     <div class="row justify-content-center align-items-center">
+      <div class="circular-img-uploader d-flex flex-column align-items-center">
+        <%= render PictureUploaderComponent.new(form: f, image: user&.foto, fallback: "avatar-empty.png") %>
+        <% if @user.persisted? %>
+          <p class="m-2 text-gray-500">Cambiar foto</p>
+        <% else %>
+          <p class="m-2 text-gray-500">Subir foto</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6 col-lg-6">
         <%= f.input :nombre, placeholder: "Nombre", label: false %>
       </div>
@@ -25,24 +35,9 @@
         <%= f.input :direccion, placeholder: "Dirección", label: false  %>
       </div>
     </div>
-    <div class="row justify-content-center align-items-center">
-      
-      <div class="circular-img-uploader d-flex flex-column align-items-center">
-        <%= render PictureUploaderComponent.new(form: f, image: user&.foto, fallback: "avatar-empty.png") %>
-        <% if @user.persisted? %>
-          <p class="m-2 text-gray-500">Cambiar foto</p>
-        <% else %>
-          <p class="m-2 text-gray-500">Subir foto</p>
-        <% end %>
-      </div>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
       <%= f.submit "Guardar cambios", id:"Sign-up-btn", class: "btn btn-outline-dark btn-soft profile-btn w-75 btn-sm" %>
-    </div>
-    <div class="register d-flex justify-content-center mt-3">
-      <% if !current_user.nil? %>
-        <%= link_to "Atrás", user_path, class:"register-btn" %>
-      <% else %>
-        <%= link_to "Atrás", user_path, class:"register-btn" %>
-      <% end %>
+      <%= link_to "Atrás", user_path, class:"register-btn mt-3" %>
     </div>
   <% end %>
 </div>
