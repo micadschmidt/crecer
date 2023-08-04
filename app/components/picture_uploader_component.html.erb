@@ -1,0 +1,8 @@
+<div class="rounded d-flex position-relative w-100 justify-content-center" style="height: 100px;" data-controller="file-preview">
+  <%= helpers.image_attached(image, fallback: fallback, style: "object-fit: cover;", class: "position-absolute rounded h-100", data: { file_preview_target: "output" }) %>
+  <label for="file_input" class="position-absolute absolute-center">
+    <%= helpers.svg("upload-cloud", style: "border-color: gray;") %>
+  </label>
+
+  <%= form.file_field :foto, id: "file_input", class: "d-none", data: { file_preview_target: "input", action: "file-preview#readURL change->autosave#save" }, direct_upload: true %>
+</div>
